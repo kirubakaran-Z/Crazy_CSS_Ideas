@@ -1,0 +1,208 @@
+body {
+  margin: 0;
+  overflow: hidden;
+}
+.main {
+  height: 100vh;
+  width: 100%;
+  overflow: hidden;
+  background: black;
+}
+.stars {
+  position: absolute;
+  z-index: 0;
+  top: -700px;
+}
+.city {
+  position: absolute;
+  z-index: 0;
+  top: 150px;
+  object-fit: contain;
+}
+.leavs {
+  background: linear-gradient(
+    to bottom,
+    rgb(0, 0, 0) 0%,
+    rgba(3, 6, 58, 0.849) 20%,
+    rgba(5, 61, 126, 0.842) 60%,
+    rgba(255, 104, 44, 0.253) 90%
+  );
+  height: 50vh;
+  width: 100%;
+  position: relative;
+}
+.land {
+  position: absolute;
+  top: 50vh;
+  width: 100%;
+  height: 50vh;
+  background-color: black;
+  z-index: 11;
+}
+.a {
+  object-fit: cover;
+  position: absolute;
+  animation: moving 2s infinite;
+  animation-delay: 0.1s;
+  z-index: 10;
+}
+.b {
+  object-fit: cover;
+  margin-top: -20px;
+  margin-left: -400px;
+  position: absolute;
+  animation: moving2 1s infinite linear;
+  z-index: 10;
+}
+
+@keyframes moving {
+  0% {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+  50% {
+    margin-left: 3px;
+    margin-top: 5px;
+  }
+  100% {
+    margin-left: 0px;
+    margin-top: 0px;
+  }
+}
+@keyframes moving2 {
+  0% {
+    margin-left: -400px;
+    margin-top: 0px;
+  }
+  50% {
+    margin-left: -402px;
+    margin-top: 2px;
+  }
+  100% {
+    margin-left: -400px;
+    margin-top: 0px;
+  }
+}
+.pice {
+  background: white;
+  height: 9px;
+  width: 8px;
+  border-radius: 5px 5px 5px 0;
+  animation: fly 6s infinite linear;
+  position: absolute;
+  z-index: 9;
+}
+.c {
+  margin-left: 20%;
+  margin-top: -10px;
+}
+.d {
+  margin-left: 40%;
+  margin-top: 30px;
+}
+.e {
+  margin-left: 50%;
+}
+.f {
+  margin-left: 60%;
+}
+.g {
+  margin-left: 80%;
+  margin-top: 30px;
+}
+.h {
+  margin-left: 100%;
+  margin-top: -10px;
+}
+
+@keyframes fly {
+  0% {
+    height: 5px;
+    width: 6px;
+    margin-top: 0px;
+  }
+  25% {
+    margin-left: 40px;
+  }
+  50% {
+    margin-left: -40px;
+  }
+  75% {
+    margin-left: 40px;
+  }
+  100% {
+    height: 0px;
+    width: 1px;
+    margin-top: 600px;
+  }
+}
+.pice1 {
+  background: white;
+  height: 9px;
+  width: 8px;
+  border-radius: 5px 5px 5px 0;
+  animation: flya 6s infinite linear;
+  position: absolute;
+  z-index: 9;
+}
+@keyframes flya {
+  0% {
+    height: 6px;
+    width: 4px;
+    margin-top: 0px;
+  }
+  25% {
+    margin-left: 10px;
+  }
+  50% {
+    margin-left: -0px;
+  }
+  75% {
+    margin-left: 2px;
+  }
+  100% {
+    height: 0px;
+    width: 1px;
+    margin-top: 500px;
+  }
+}
+.pice2 {
+  background: white;
+  height: 9px;
+  width: 8px;
+  border-radius: 5px 5px 5px 0;
+  animation: flyc 4s infinite linear;
+  position: absolute;
+  z-index: 9;
+}
+@keyframes flyc {
+  0% {
+    height: 5px;
+    width: 4px;
+    margin-top: 0px;
+  }
+  25% {
+    margin-left: 30px;
+  }
+  50% {
+    margin-left: -20px;
+    margin-top: 100px;
+  }
+  75% {
+    margin-left: 2px;
+  }
+  100% {
+    height: 0px;
+    width: 1px;
+    margin-top: 40vh;
+  }
+}
+.delay1 {
+  animation-delay: 0.5s;
+}
+.delay2 {
+  animation-delay: 1s;
+}
+.delay3 {
+  animation-delay: 2s;
+}

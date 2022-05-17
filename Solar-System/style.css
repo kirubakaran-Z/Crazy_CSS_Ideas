@@ -1,0 +1,231 @@
+body {
+  background: url("https://cdn.pixabay.com/photo/2018/10/16/07/07/stars-3750824_1280.png");
+  background-size: 100vw auto;
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  align-items: center;
+}
+div {
+  position: fixed;
+}
+.orbit {
+  z-index: 2;
+  top: 50%;
+  width: var(--width);
+  height: var(--height);
+  border: solid gray 0.5px;
+  border-radius: 50%;
+  left: calc((0vmax - var(--width) / 2));
+  margin-top: -0.5vmax;
+}
+.m {
+  --width: 50vmax;
+  --height: 5vmax;
+}
+.v {
+  --width: 60vmax;
+  --height: 6vmax;
+}
+.e {
+  --width: 75vmax;
+  --height: 7vmax;
+}
+.ma {
+  --width: 90vmax;
+  --height: 8vmax;
+}
+.j {
+  --width: 110vmax;
+  --height: 9vmax;
+}
+.s {
+  --width: 130vmax;
+  --height: 10vmax;
+}
+.u {
+  --width: 150vmax;
+  --height: 11vmax;
+}
+.n {
+  --width: 170vmax;
+  --height: 12vmax;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.sun {
+  background: red;
+  width: 30vmax;
+  height: 30vmax;
+  left: -10vmax;
+  border-radius: 50%;
+  animation: glow 10s linear infinite;
+}
+.hider {
+  background: red;
+  width: 39.8vmax;
+  height: 3vmax;
+  top: 44%;
+  border-radius: 20px;
+}
+@keyframes glow {
+  0% {
+    box-shadow: 0 0 5vmax 1vmax red, 0 0 5vmax 2vmax orange;
+  }
+  40% {
+    box-shadow: 0 0 5vmax 2vmax red, 0 0 5vmax 4vmax orange;
+  }
+  70% {
+    box-shadow: 0 0 3vmax 1vmax red, 0 0 4vmax vmax orange;
+  }
+  100% {
+    box-shadow: 0 0 5vmax 1vmax red, 0 0 5vmax 2vmax orange;
+  }
+}
+.planet {
+  border-radius: 50%;
+}
+.mercury {
+  top: 55vh;
+  width: 3vmax;
+  height: 3vmax;
+  background: #000;
+  left: 12vmax;
+  box-shadow: inset 0.3vmax 0 0.5vmax red, inset 0.2vmax 0.2vmax 5vmax #000;
+}
+.venus {
+  box-shadow: inset 0.5vmax 0.5vmax 0.5vmax #e77d11,
+    inset 0.2vmax 0.2vmax 5vmax #000;
+  top: 50%;
+  width: 4vmax;
+  height: 4vmax;
+  background: #000;
+  left: 25vmax;
+}
+.earth {
+  top: 45%;
+  width: 5vmax;
+  height: 5vmax;
+  background: url("https://www.solarsystemscope.com/textures/download/2k_earth_daymap.jpg");
+  background-size: auto 4vmax;
+  left: 34vmax;
+  animation: spin 15s linear infinite;
+  box-shadow: inset 0.5vmax 0.5vmax 0.5vmax rgba(75, 170, 146, 0.767),
+    inset 0.5vmax 0.5vmax 6vmax #000;
+}
+.mars {
+  width: 3vmax;
+  height: 3vmax;
+  background: black;
+  left: 38vmax;
+  top: 45%;
+  box-shadow: inset 0.5vmax 0.5vmax 0.5vmax #814509,
+    inset 0.8vmax 0.8vmax 0.8vmax #7e2d0b;
+}
+.jupiter {
+  width: 8vmax;
+  height: 8vmax;
+  top: 40%;
+  left: 45vmax;
+  background: url("https://www.solarsystemscope.com/textures/download/2k_jupiter.jpg");
+  background-size: auto 7vmax;
+  box-shadow: inset 0.5vmax 0.5vmax 0.5vmax #e7671191,
+    inset 0.8vmax 0.8vmax 1vmax #c1410e88, inset 5vmax 5vmax 10vmax #000;
+  animation: spin 9s linear infinite;
+}
+.Surtan {
+  width: 7vmax;
+  height: 7vmax;
+  top: 40%;
+  transform: rotate(-22deg);
+  left: 60vmax;
+  background: url("https://www.solarsystemscope.com/textures/download/2k_saturn.jpg");
+  background-size: auto 7vmax;
+  box-shadow: inset 0.5vmax 0.5vmax 0.5vmax #723c05,
+    inset 0.8vmax 0.8vmax 0.8vmax #702606, inset 5vmax 5vmax 10vmax #000;
+  animation: spin 9s linear infinite;
+}
+@keyframes spin {
+  0% {
+    background-position-x: 0;
+  }
+  100% {
+    background-position-x: -24vmax;
+  }
+}
+.rings {
+  border: solid 1vmax #0000;
+  outline: solid 0.5vmax #752706;
+  box-shadow: 0 0 0 0.5vmax #1d0a01, 0 0 0 0.7vmax #642206,
+    0 0 0 0.8vmax #b84818, 0 0 0 1.3vmax #792907;
+
+  width: 7vmax;
+  height: 1max;
+  border-radius: 50%;
+  margin: 3vmax -1vmax;
+  top: 40%;
+  left: 60vmax;
+  display: flex;
+  align-items: center;
+  transform: rotate(-20deg);
+}
+.pathu {
+  clip-path: ellipse(100% 60% at 8% 20%);
+}
+.path {
+  clip-path: ellipse(100% 50% at 50% 10%);
+}
+.ringsshadow {
+  width: 12vmax;
+  height: 7vmax;
+  margin: 0 0.4vmax;
+  background: linear-gradient(to bottom right, #0000, #000 80%);
+  transform: rotate(-90deg);
+  border-radius: 50%;
+}
+.uranus {
+  width: 5vmax;
+  height: 5vmax;
+  top: 40%;
+  left: 70vmax;
+  background: url("https://www.solarsystemscope.com/textures/download/2k_uranus.jpg");
+  background-size: auto 7vmax;
+  box-shadow: inset 0.5vmax 0.5vmax 0.5vmax rgb(103, 191, 226),
+    inset 0.8vmax 0.8vmax 0.8vmax rgb(94, 177, 138),
+    inset 5vmax 5vmax 10vmax #000;
+  transform: rotate(-70deg);
+}
+.ringsshadowUran {
+  width: 10vmax;
+  height: 7vmax;
+  margin: 0 0.4vmax;
+  background: linear-gradient(to bottom right, #0000, #000 80%);
+  transform: rotate(-180deg);
+  border-radius: 50%;
+}
+.ringsUran {
+  border: solid 1vmax #0000;
+  outline: solid 0.3vmax #30222e;
+  width: 6vmax;
+  height: 1max;
+  border-radius: 50%;
+  margin: 1.5vmax -1vmax;
+  top: 40%;
+  left: 70vmax;
+  display: flex;
+  align-items: center;
+  transform: rotate(-90deg);
+}
+.neptune {
+  width: 7vmax;
+  height: 7vmax;
+  top: 40%;
+  left: 80vmax;
+  background: url("https://www.solarsystemscope.com/textures/download/2k_neptune.jpg");
+  background-size: auto 7vmax;
+  box-shadow: inset 0.5vmax 0.5vmax 0.5vmax #285ea591,
+    inset 0.8vmax 0.8vmax 1vmax #3550c788,
+    inset 5vmax 5vmax 10vmax rgba(0, 0, 0, 0.842);
+  animation: spin 9s linear infinite;
+}

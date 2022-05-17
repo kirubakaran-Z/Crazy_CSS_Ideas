@@ -1,0 +1,113 @@
+:root {
+  --primary-color: rgb(0, 0, 0);
+  --Secondary-color: rgb(24, 104, 14);
+}
+.bg {
+  position: absolute;
+  object-fit: contain;
+  width: 100%;
+  z-index: 0;
+}
+body {
+  background: var(--primary-color);
+  margin: 0%;
+}
+.main {
+  width: 100%;
+  height: 100vh;
+  position: relative;
+  overflow: hidden;
+}
+.colors {
+  position: absolute;
+  height: 800px;
+  width: 800px;
+  border-radius: 50%;
+  background: radial-gradient(var(--Secondary-color) 20%, transparent 70%);
+  transition: 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.crack {
+  object-fit: contain;
+  height: 400px;
+}
+.space {
+  position: absolute;
+  background: black;
+  height: 25px;
+  width: 100%;
+  transition: 0.9s;
+  z-index: 10;
+  box-shadow: inset 10px 5px 10px var(--Secondary-color),
+    inset 10px 5px 10px var(--Secondary-color);
+}
+.space:hover {
+  height: 23px;
+  transition: 0.08s;
+  margin-top: -4px;
+}
+.a {
+  top: 50%;
+  transform: rotate(45deg);
+}
+.b {
+  top: 50%;
+  left: 20%;
+  transform: rotate(-45deg);
+}
+.c {
+  top: 50%;
+  left: 30%;
+  transform: rotate(-35deg);
+}
+.d {
+  top: 50%;
+  left: 20%;
+  transform: rotate(35deg);
+}
+.e {
+  top: 50%;
+  left: -50%;
+  transform: rotate(35deg);
+}
+.f {
+  top: 50%;
+  left: -20%;
+  transform: rotate(35deg);
+}
+.g {
+  top: 50%;
+  left: 0%;
+  transform: rotate(-25deg);
+  width: 1700px;
+}
+.h {
+  top: 50%;
+  left: -40%;
+  transform: rotate(-40deg);
+  width: 1700px;
+}
+.i {
+  top: 50%;
+  left: -50%;
+  transform: rotate(-35deg);
+}
+.j {
+  top: 50%;
+  left: -20%;
+  transform: rotate(35deg);
+}
+.k {
+  top: 50%;
+  left: 0%;
+  transform: rotate(-25deg);
+  width: 1700px;
+}
+.l {
+  top: 50%;
+  left: -40%;
+  transform: rotate(-40deg);
+  width: 1700px;
+}

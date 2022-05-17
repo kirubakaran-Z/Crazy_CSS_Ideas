@@ -1,0 +1,101 @@
+:root {
+  --bg-color: rgba(216, 33, 33, 0.363);
+  --bg-color1: cadetblue;
+}
+body {
+  background: var(--bg-color1);
+  background-position-y: -3px;
+  background-position-x: 35px;
+}
+/* THe hexgon Start */
+.main {
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hex {
+  position: relative;
+  width: 225px;
+  height: 255px;
+  margin: 5px;
+  transition: 0.2s;
+}
+.hex:hover {
+  position: relative;
+  width: 225px;
+  height: 255px;
+  margin: 10px;
+  transition: 0.2s;
+}
+.pice1 {
+  position: absolute;
+  border-left: 112.5px solid transparent;
+  border-right: 112.5px solid transparent;
+  border-bottom: 65px solid var(--bg-color);
+}
+.pice2 {
+  background: var(--bg-color);
+  position: absolute;
+  width: 100%;
+  height: 127px;
+  top: 65px;
+}
+.pice3 {
+  position: absolute;
+  border-left: 112.5px solid transparent;
+  border-right: 112.5px solid transparent;
+  border-top: 65px solid var(--bg-color);
+  bottom: -2px;
+}
+.pos {
+  z-index: 10;
+  left: -255px;
+}
+.pos1 {
+  z-index: 10;
+  top: -200px;
+  left: 337px;
+}
+/* THe hexgon Finish */
+.screen1 {
+  background: rgb(114, 95, 160);
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 11;
+  display: none;
+}
+.close {
+  background: red;
+  width: 20px;
+  height: 20px;
+  position: absolute;
+  right: 0px;
+  color: aliceblue;
+  padding: 2px;
+}
+/*Custom ScrollBar*/
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: var(--bg-color);
+  border-radius: 5px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: var(--bg-color);
+}

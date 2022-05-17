@@ -1,0 +1,347 @@
+:root {
+  --bgcolor: linear-gradient(to bottom, #062747 0%, rgba(0, 0, 0, 0.815) 100%);
+  --trafic-post: rgba(131, 131, 11, 0.966);
+}
+body {
+  background: var(--bgcolor);
+  height: 100vh;
+  margin: 0%;
+  margin: 0%;
+  overflow: hidden;
+}
+.ALL {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  -webkit-box-reflect: below;
+  position: relative;
+}
+.ALL div {
+  position: absolute;
+  -webkit-box-reflect: none;
+}
+.build {
+  width: 5vw;
+  height: 40vh;
+  background: red;
+  top: 30vh;
+  left: 20vw;
+}
+.road {
+  width: 100vw;
+  height: 50vh;
+  background: rgba(0, 0, 0, 0.219);
+  backdrop-filter: blur(10px);
+  top: 50vh;
+  position: fixed;
+  clip-path: polygon(48% 0, 52% 0, 100% 100%, 0 100%);
+}
+.streeLight {
+  width: 40vw;
+  height: 30vh;
+  top: 30vh;
+  border-top: solid var(--trafic-post) 1vw;
+  animation: move-lamps 30s ease-in infinite;
+  -webkit-box-reflect: below 2px;
+}
+@keyframes move-lamps {
+  0% {
+    width: 5vw;
+    height: 5vh;
+    top: 45vh;
+    border-top: solid var(--trafic-post) 0.1vw;
+  }
+  80% {
+    height: 60vh;
+    top: 10vh;
+    width: 60vw;
+    border-top: solid var(--trafic-post) 1.5vw;
+  }
+  100% {
+    height: 60vh;
+    top: 10vh;
+    width: 60vw;
+    border-top: solid var(--trafic-post) 1.5vw;
+  }
+}
+.cont {
+  width: 100vw;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.zebracrossing {
+  animation: move-zebra 30s ease-in infinite;
+  position: absolute;
+  display: flex;
+  justify-content: center;
+  width: 40vw;
+  height: 30vh;
+  top: 30vh;
+}
+@keyframes move-zebra {
+  0% {
+    width: 5vw;
+    height: 5vh;
+    top: 45vh;
+  }
+  80% {
+    height: 60vh;
+    top: 10vh;
+    width: 60vw;
+  }
+  100% {
+    height: 60vh;
+    top: 10vh;
+    width: 60vw;
+  }
+}
+.post {
+  width: 1vw;
+  height: 100%;
+  margin-top: -2.5%;
+  background: var(--trafic-post);
+  box-shadow: inset 0.2vw 0.2vw 0.2vw rgba(0, 0, 0, 0.5);
+  animation: move-posts 30s ease-in infinite;
+  -webkit-box-reflect: below 2px;
+}
+.right {
+  right: 0;
+}
+@keyframes move-posts {
+  0% {
+    width: 0.1vw;
+  }
+  80% {
+    width: 1.5vw;
+  }
+  100% {
+    width: 1.5vw;
+  }
+}
+.light {
+  width: 5%;
+  height: 12%;
+  border-radius: 50%;
+  animation: moveLight 30s ease-in infinite;
+  box-shadow: 0 0 0 10px 10px red;
+}
+@keyframes moveLight {
+  0% {
+    width: 0.1vw;
+    height: 0.1vw;
+  }
+  80% {
+    width: 4vw;
+    height: 4vw;
+  }
+  100% {
+    width: 4vw;
+    height: 4vw;
+  }
+}
+.light::before {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  left: -30%;
+  top: -70%;
+  background: rgb(27, 26, 26);
+  border-radius: 50%;
+  z-index: -1;
+}
+.light::after {
+  content: "";
+  position: absolute;
+  width: 150%;
+  height: 150%;
+  left: -30%;
+  top: 10%;
+  background: rgb(27, 26, 26);
+  border-radius: 0 0 50% 50%;
+  z-index: -1;
+}
+.green {
+  background-image: radial-gradient(circle at 50% 50%, rgb(8, 109, 5), green);
+  box-shadow: 0 0 15px 10px rgba(0, 255, 13, 0.781);
+  background-size: 3px 3px;
+  left: 30%;
+  top: -10%;
+  animation: greenlight 30s linear infinite;
+}
+@keyframes greenlight {
+  29% {
+    background-image: radial-gradient(circle at 50% 50%, rgb(8, 109, 5), green);
+    box-shadow: 0 0 15px 10px rgba(0, 255, 13, 0.781);
+  }
+  30% {
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      rgb(27, 26, 26),
+      rgb(85, 81, 81)
+    );
+    box-shadow: 0 0 15px 10px #0000;
+  }
+  100% {
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      rgb(27, 26, 26),
+      rgb(85, 81, 81)
+    );
+    box-shadow: 0 0 15px 10px #0000;
+  }
+}
+
+.yellow {
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgb(27, 26, 26),
+    rgb(85, 81, 81)
+  );
+  box-shadow: 0 0 15px 10px #0000;
+  background-size: 3px 3px;
+  left: 40%;
+  top: -10%;
+  animation: yellowlight 30s linear infinite;
+}
+@keyframes yellowlight {
+  30% {
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      rgb(27, 26, 26),
+      rgb(85, 81, 81)
+    );
+    box-shadow: 0 0 15px 10px #0000;
+  }
+  31% {
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      rgb(154, 156, 4),
+      yellow
+    );
+    box-shadow: 0 0 15px 10px rgba(255, 251, 0, 0.781);
+  }
+  60% {
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      rgb(154, 156, 4),
+      yellow
+    );
+    box-shadow: 0 0 15px 10px rgba(255, 251, 0, 0.781);
+  }
+  61% {
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      rgb(27, 26, 26),
+      rgb(85, 81, 81)
+    );
+    box-shadow: 0 0 15px 10px #0000;
+  }
+  100% {
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      rgb(27, 26, 26),
+      rgb(85, 81, 81)
+    );
+    box-shadow: 0 0 15px 10px #0000;
+  }
+}
+
+.red {
+  background-image: radial-gradient(
+    circle at 50% 50%,
+    rgb(27, 26, 26),
+    rgb(85, 81, 81)
+  );
+  background-size: 3px 3px;
+  box-shadow: 0 0 15px 10px #0000;
+  left: 20%;
+  top: -10%;
+  animation: redlight 30s linear infinite;
+}
+@keyframes redlight {
+  61% {
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      rgb(27, 26, 26),
+      rgb(85, 81, 81)
+    );
+    box-shadow: 0 0 15px 10px #0000;
+  }
+  62% {
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      rgb(122, 10, 10),
+      rgb(255, 0, 0)
+    );
+    box-shadow: 0 0 15px 10px rgba(255, 0, 0, 0.733);
+  }
+  100% {
+    background-image: radial-gradient(
+      circle at 50% 50%,
+      rgb(122, 10, 10),
+      rgb(255, 0, 0)
+    );
+    box-shadow: 0 0 15px 10px rgba(255, 0, 0, 0.733);
+  }
+}
+.cross {
+  position: absolute;
+  height: 10%;
+  width: 10%;
+  margin-top: 50%;
+  clip-path: polygon(20% 0, 80% 0, 100% 100%, 0 100%);
+}
+.black {
+  background: rgba(0, 0, 0, 0.507);
+}
+.white {
+  background: rgba(155, 151, 151, 0.432);
+}
+.z1 {
+  clip-path: polygon(48% 0, 78% 0, 100% 100%, 60% 100%);
+  margin-left: 10%;
+  width: 20%;
+}
+.z2 {
+  clip-path: polygon(48% 0, 78% 0, 100% 100%, 60% 100%);
+  -webkit-transform: scaleX(-1);
+  margin-left: -10%;
+  width: 20%;
+}
+
+.z3 {
+  clip-path: polygon(38% 0, 68% 0, 100% 100%, 60% 100%);
+  margin-left: 30%;
+  width: 20%;
+}
+.z4 {
+  clip-path: polygon(38% 0, 68% 0, 100% 100%, 60% 100%);
+  -webkit-transform: scaleX(-1);
+  margin-left: -30%;
+  width: 20%;
+}
+.z5 {
+  clip-path: polygon(28% 0, 58% 0, 100% 100%, 60% 100%);
+  margin-left: 50%;
+  width: 20%;
+}
+.z6 {
+  clip-path: polygon(28% 0, 58% 0, 100% 100%, 60% 100%);
+  -webkit-transform: scaleX(-1);
+  margin-left: -50%;
+  width: 20%;
+}
+.z7 {
+  clip-path: polygon(18% 0, 53% 0, 100% 100%, 60% 100%);
+  margin-left: 70%;
+  width: 20%;
+}
+.z8 {
+  clip-path: polygon(18% 0, 53% 0, 100% 100%, 60% 100%);
+  -webkit-transform: scaleX(-1);
+  margin-left: -70%;
+  width: 20%;
+}

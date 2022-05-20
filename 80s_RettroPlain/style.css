@@ -1,0 +1,312 @@
+:root {
+  --dark1: #0f1f2c;
+}
+body {
+  margin: 0;
+  padding: 0;
+  height: 100vh;
+}
+.horizan {
+  background-image: linear-gradient(to bottom, #df6b27, #3f0909);
+  height: 50vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.sun {
+  position: absolute;
+  width: 30vw;
+  height: 30vw;
+  border-radius: 50%;
+  top: 10vh;
+  background: #df6b27;
+}
+.s1 {
+  clip-path: inset(0 0 70% 0);
+}
+.s2 {
+  clip-path: inset(32% 0 65% 0);
+}
+.s3 {
+  clip-path: inset(38% 0 60% 0);
+}
+.s4 {
+  clip-path: inset(44% 0 55% 0);
+}
+.s5 {
+  clip-path: inset(49.5% 0 50% 0);
+}
+.shine {
+  position: absolute;
+  width: 100%;
+  height: 5px;
+  background: rgb(219, 46, 190);
+  top: 0;
+  animation: shine 5s infinite;
+}
+@keyframes shine {
+  0% {
+    box-shadow: 0 0 20vh 10vh rgba(219, 46, 190, 0.308);
+  }
+  50% {
+    box-shadow: 0 0 20vh 10vh rgba(185, 6, 117, 0.308);
+  }
+  100% {
+    box-shadow: 0 0 20vh 10vh rgba(219, 46, 190, 0.308);
+  }
+}
+.ground {
+  height: 50vh;
+  background-image: linear-gradient(to bottom, #11020d, #3f0909);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+  overflow: hidden;
+}
+.lines {
+  width: 100%;
+  position: absolute;
+  top: 0;
+  height: 2px;
+  background: rgb(219, 46, 190);
+  box-shadow: 0 0 20px rgba(180, 173, 173, 0.5);
+  animation: slide 2s ease-in infinite;
+}
+@keyframes slide {
+  0% {
+    top: 0;
+    height: 1px;
+  }
+  100% {
+    top: 50vh;
+    height: 4px;
+  }
+}
+.h1 {
+  animation-delay: 0s;
+}
+.h2 {
+  animation-delay: 0.25s;
+}
+.h3 {
+  animation-delay: 0.5s;
+}
+.h4 {
+  animation-delay: 0.75s;
+}
+.h5 {
+  animation-delay: 1s;
+}
+.h6 {
+  animation-delay: 1.25s;
+}
+.h7 {
+  animation-delay: 1.5s;
+}
+.h8 {
+  animation-delay: 1.75s;
+}
+.vlines {
+  height: 100vw;
+  width: 5px;
+  background: rgba(219, 46, 190, 0.589);
+  box-shadow: 0 0 10px 10px rgba(180, 173, 173, 0.5);
+  position: absolute;
+}
+.v1 {
+  clip-path: polygon(40% 0, 60% 0, 100% 100%, 0 100%);
+}
+.v2 {
+  left: 40vw;
+  clip-path: polygon(60% 0, 80% 0, 100% 100%, 0 100%);
+  transform: rotate(20deg);
+  margin-top: -20px;
+}
+.v3 {
+  left: 59vw;
+  clip-path: polygon(60% 0, 80% 0, 100% 100%, 0 100%);
+  transform: rotate(-20deg);
+  margin-top: -20px;
+}
+.v4 {
+  left: 30vw;
+  clip-path: polygon(60% 0, 80% 0, 100% 100%, 0 100%);
+  transform: rotate(40deg);
+  margin-top: -40px;
+}
+.v5 {
+  left: 70vw;
+  clip-path: polygon(60% 0, 80% 0, 100% 100%, 0 100%);
+  transform: rotate(-40deg);
+  margin-top: -40px;
+}
+.v6 {
+  left: 20vw;
+  clip-path: polygon(60% 0, 80% 0, 100% 100%, 0 100%);
+  transform: rotate(55deg);
+  margin-top: -60px;
+}
+.v7 {
+  left: 80vw;
+  clip-path: polygon(60% 0, 80% 0, 100% 100%, 0 100%);
+  transform: rotate(-55deg);
+  margin-top: -60px;
+}
+.v8 {
+  left: 5vw;
+  clip-path: polygon(60% 0, 80% 0, 100% 100%, 0 100%);
+  transform: rotate(70deg);
+  margin-top: -80px;
+}
+.v9 {
+  left: 95vw;
+  clip-path: polygon(60% 0, 80% 0, 100% 100%, 0 100%);
+  transform: rotate(-70deg);
+  margin-top: -80px;
+}
+.v10 {
+  left: -15vw;
+  clip-path: polygon(60% 0, 80% 0, 100% 100%, 0 100%);
+  transform: rotate(78deg);
+  margin-top: -100px;
+}
+.v11 {
+  left: 115vw;
+  clip-path: polygon(60% 0, 80% 0, 100% 100%, 0 100%);
+  transform: rotate(-78deg);
+  margin-top: -100px;
+}
+.Mount {
+  left: 53vw;
+  position: absolute;
+  bottom: 0px;
+  width: 20vw;
+  height: 20vh;
+  background-image: linear-gradient(to bottom, #581e03, #3f0909);
+
+  clip-path: polygon(50% 0%, 0% 100%, 100% 100%);
+}
+.inmount {
+  width: 50%;
+  height: 100%;
+  background: #11020d;
+  float: right;
+}
+.m1 {
+  width: 30vw;
+  height: 20vh;
+  left: 60vw;
+}
+.m2 {
+  width: 30vw;
+  height: 18vh;
+  left: 13vw;
+}
+.ls {
+  float: left;
+}
+.m3 {
+  left: 0;
+  width: 30vw;
+}
+.birds {
+  position: absolute;
+  width: 8px;
+  height: 8px;
+  background: var(--dark1);
+  border-radius: 50%;
+  animation: bird-move 1.5s linear infinite;
+}
+@keyframes bird-move {
+  0% {
+    margin-bottom: -2px;
+  }
+  25% {
+    margin-bottom: 0px;
+  }
+  50% {
+    margin-bottom: 2px;
+  }
+  75% {
+    margin-bottom: 0px;
+  }
+  100% {
+    margin-bottom: -2px;
+  }
+}
+
+.birds::before {
+  content: "";
+  width: 20px;
+  height: 5px;
+  margin-left: -30px;
+  background: var(--dark1);
+  border-radius: 50%;
+  position: absolute;
+  animation: birds2 1.5s linear infinite;
+}
+.birds::after {
+  content: "";
+  width: 20px;
+  height: 5px;
+  margin-left: 10px;
+  background: var(--dark1);
+  border-radius: 50%;
+  position: absolute;
+  transform: rotate(-30deg);
+  margin-top: -10px;
+  animation: birds 1.5s linear infinite;
+}
+@keyframes birds {
+  0% {
+    transform: rotate(-30deg);
+    margin-top: -5px;
+    margin-left: 5px;
+  }
+  25% {
+    transform: rotate(0deg);
+    margin-top: 0px;
+  }
+  50% {
+    transform: rotate(30deg);
+    margin-top: 5px;
+    margin-left: 5px;
+  }
+  75% {
+    transform: rotate(0deg);
+    margin-top: 0px;
+  }
+  100% {
+    transform: rotate(-30deg);
+    margin-top: -5px;
+    margin-left: 5px;
+  }
+}
+@keyframes birds2 {
+  0% {
+    transform: rotate(30deg);
+    margin-top: -5px;
+    margin-left: -15px;
+  }
+  25% {
+    transform: rotate(0deg);
+    margin-top: 0px;
+  }
+  50% {
+    transform: rotate(-30deg);
+    margin-top: 5px;
+    margin-left: -15px;
+  }
+  75% {
+    transform: rotate(0deg);
+    margin-top: 0px;
+  }
+  100% {
+    transform: rotate(30deg);
+    margin-top: -5px;
+    margin-left: -15px;
+  }
+}

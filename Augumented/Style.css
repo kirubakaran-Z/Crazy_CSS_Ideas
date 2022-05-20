@@ -1,0 +1,60 @@
+body {
+  background-color: #000000;
+}
+.augmented-holder {
+  /* background-image: url("https://images-cdn.newscred.com/Zz04NjA3ZjljMjQ0ODkxMWViOWRjYzU1OGJkNjI1ZjVkZA=="); */
+  background-position: center;
+}
+.pitch-mixin {
+  --aug-tr: 50px;
+  --aug-b-extend1: 80%;
+  --aug-border-all: 10px;
+  --aug-border-bg: url("https://images-cdn.newscred.com/Zz04NjA3ZjljMjQ0ODkxMWViOWRjYzU1OGJkNjI1ZjVkZA==");
+  --aug-inlay-all: 4px;
+  --aug-inlay-bg: radial-gradient(rgba(255, 0, 191, 0.301), black);
+  --aug-inlay-opacity: 1;
+  width: 100%;
+  height: 400px;
+}
+
+.pitch-core {
+  --aug-border: initial;
+  --aug-border-all: 7px;
+  --aug-border-bg: radial-gradient(
+      at top,
+      rgb(0, 119, 255) 25%,
+      transparent 50%
+    ),
+    url("/img/what_a_save.gif") 50% 50% / 100% 100%;
+
+  --aug-inlay: initial;
+  --aug-inlay-all: 4px;
+  --aug-inlay-bg: radial-gradient(at center center, rgb(255, 0, 140), black);
+  --aug-inlay-opacity: 0.5;
+
+  --aug-clip-b1: initial;
+  --aug-clip-b2: initial;
+  --aug-b-extend1: 50%;
+  height: 400px;
+  width: 100%;
+  transition: 2s;
+}
+.pitch-core:not(:hover) {
+  --aug-clip-tl1: initial;
+  --aug-tl-inset1: 30px;
+  --aug-tl1-alt-join-in: initial;
+
+  --aug-scoop-tr1: initial;
+  --aug-tr1: 25px;
+}
+.pitch-core:hover {
+  --aug-clip-t1: initial;
+  --aug-clip-t2: initial;
+  --aug-clip-r1: initial;
+  --aug-clip-r2: initial;
+  --aug-clip-l1: initial;
+  --aug-clip-l2: initial;
+  --aug-t-extend1: 50%;
+  --aug-r-extend1: 50%;
+  --aug-l-extend1: 50%;
+}
